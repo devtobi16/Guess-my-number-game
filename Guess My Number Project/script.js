@@ -3,9 +3,9 @@ console.log(document.querySelector(".message").textContent);
 function displayText(className, message) {
   document.querySelector(className).textContent = message;
 }
-function numberCalc() {
-  Math.trunc(Math.random() * 20) + 1;
-}
+
+  
+
 /*Notes=> DOM stands for Document Object Model. It allows javascript to access 
 html elements and styles to manipulate them. 
 Note: DOM is not part of javascript. It is part of the web APIs that can
@@ -28,7 +28,7 @@ executed, but only when the event happens.  <=Notes*/
 // console.log(document.querySelector('.guess').value);
 let score = 20;
 let highScore = 0;
-let correctNumber = numberCalc();
+let correctNumber = Math.trunc(Math.random() * 20) + 1;
 displayText(".number", "?");
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
@@ -44,8 +44,9 @@ document.querySelector(".check").addEventListener("click", function () {
       displayText(highScore);
     }
   } else if (guess !== correctNumber) {
-    displayText(".message", guess > correctNumber ? `Too high` : `Too low`);
+    
     if (score > 1) {
+displayText(".message", guess > correctNumber ? `Too high` : `Too low`);
       score--;
       displayText(".score", score);
     } else {
