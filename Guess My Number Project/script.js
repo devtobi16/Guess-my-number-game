@@ -6,20 +6,7 @@ function displayText(className, message) {
 
   
 
-/*Notes=> DOM stands for Document Object Model. It allows javascript to access 
-html elements and styles to manipulate them. 
-Note: DOM is not part of javascript. It is part of the web APIs that can
-interact with JavaScript 
-The differences between the "text Content" model and 'value' model are 
-that the former is used for regular strings, while the latter is used 
-for input values, and that 'value'can be used to set values in the input
-field of the html
-An event is something that happens on the page e.g a mouse click or a
-key press. 
-An event listener waits for an event to happen, and then reacts to
-it.
-The function in the event listener won't be called when the script is
-executed, but only when the event happens.  <=Notes*/
+
 // document.querySelector('.message').textContent = `🎉Correct Number!`;
 // console.log(document.querySelector('.message').textContent);
 // document.querySelector('.number').textContent = '?';
